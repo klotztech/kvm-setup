@@ -1,1 +1,1 @@
-Configuration and scripts for my **XUbuntu 18.04 LTS** guest go here.
+Configuration and scripts for my **Xubuntu 18.04 LTS** guest go here.
