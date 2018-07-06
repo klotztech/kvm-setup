@@ -16,7 +16,7 @@ I currently mainly use the Xubuntu guest, which is configured for GPU passthroug
     ├── libvirt             // LibVirt configuration
     └── misc                // Miscellaneous configs + scripts
 ```
-
+###### Thanks `tree(1)` 😉 <!-- $ tree -d -->
 ## Hardware specifications
 
 **CPU:** Intel® Core™ i7-5820K @4.4GHz \
@@ -24,7 +24,7 @@ I currently mainly use the Xubuntu guest, which is configured for GPU passthroug
 **MoBo:** MSI X99A SLI Krait Edition \
 **Primary GPU:** Gigabyte GeForce GTX 770 4GB Windforce 3X (GV-N770OC-4GD) \
 **Secondary GPU:** ASUS Radeon HD 5450 Silent (90-C1CP20-L0UANABZ/90-C1CP2U-L0UANAYZ) \
-**Storage:** Samsung 960 EVO 1TB NVMe SDD (MZ-V6E1T0BW) \
+**Storage:** Samsung 960 EVO 1TB NVMe SDD (MZ-V6E1T0BW)
 
 ### Peripherals
 
