@@ -1,6 +1,7 @@
 Configuration concerning **PulseAudio** go here.
 
-##Files
+## Files
+
 | Repository file | System path |
 | --- | --- |
 | daemon.conf | /etc/pulse/daemon.conf |

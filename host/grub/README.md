@@ -1,6 +1,7 @@
 Configuration concerning the **GRUB** bootloader go here.
 
-##Files
+## Files
+
 | Repository file | System path |
 | --- | --- |
 | grub | /etc/default/grub |
