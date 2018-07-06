@@ -1,4 +1,4 @@
-Configuration concerning the GRUB bootloader go here.
+Configuration concerning the **GRUB** bootloader go here.
 
 ##Files
 | Repository file | System path |
