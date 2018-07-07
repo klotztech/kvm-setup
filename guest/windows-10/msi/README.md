@@ -1,4 +1,4 @@
-Registry files to enable/disable **Message signalled interrupts (MSI)** for passthrough devices, in order to solve performance issues like audio crackeling or video stuttering, etc..
+Registry files to enable/disable **Message-Signaled Interrupts (MSI)** for passthrough devices, in order to solve performance issues like audio crackeling or video stuttering, etc..
 
 ## Files
 
