@@ -8,6 +8,7 @@ I currently mainly use the Xubuntu guest, which is configured for GPU passthroug
 ```
 ├── guest                   // Everything concerning the virtualized guest systems
 │   ├── windows-10          // Windows 10 Pro configs + scripts
+│   │   └── msi             // Registry patches for Message-Signaled Interrupts (MSI)
 │   └── xubuntu-18.04       // Xubuntu 18.04 LTS configs + scripts
 │       └── pulseaudio      // PulseAudio configuration
 │
