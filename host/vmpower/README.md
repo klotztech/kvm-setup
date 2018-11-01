@@ -5,8 +5,8 @@ Python script to power off the host system when the main VM shuts down and there
 | Repository file | System path                         |
 | --------------- | ----------------------------------- |
 | main.py         | /opt/vmpower/main.py                |
-| vmpower.service | /etc/systemd/system/vmpower.service |
 | sudoers         | /etc/sudoers                        |
+| vmpower.service | /etc/systemd/system/vmpower.service |
 
 ## Configuration
 
@@ -18,7 +18,7 @@ To run the python script as a systemd service, add the above unit definition fil
 
 To pull in the newly added unit run the following command:
 
-``systemctl daemon-reload``.
+``systemctl daemon-reload``
 
 To run auto-start the service on boot run the following command:
 

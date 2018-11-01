@@ -1,4 +1,5 @@
 # KVM Setup
+
 My personal QEMU KVM setup and configuration.
 
 I currently mainly use the Xubuntu guest, which is configured for GPU passthrough for daily tasks and some Linux gaming. Only occasionally I fire up the Windows 10 guest and remote into it using either [Remmina](https://remmina.org/) or [FreeRDP](http://www.freerdp.com/) on the Linux guest.
@@ -15,9 +16,12 @@ I currently mainly use the Xubuntu guest, which is configured for GPU passthroug
 └── host                    // Everything concerning the host system
     ├── grub                // GRUB configuration
     ├── libvirt             // LibVirt configuration
-    └── misc                // Miscellaneous configs + scripts
+    ├── misc                // Miscellaneous configs + scripts
+    └── vmpower             // Script to automatically power off the host system
 ```
+
 ###### Thanks `tree(1)` 😉 <!-- $ tree -d -->
+
 ## Hardware specifications
 
 **CPU:** Intel® Core™ i7-5820K @4.4GHz \
@@ -34,4 +38,4 @@ I currently mainly use the Xubuntu guest, which is configured for GPU passthroug
 **Display 2&3:** ASUS VE248H, 24" (90LMC3101Q01041C) \
 **Additional:** Two mice and keyboards
 
-🍻 *cheers!*
+🍻 _cheers!_
