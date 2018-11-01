@@ -1,0 +1,9 @@
+#
+# This has to be placed somewhere into /etc/sudoers
+# to allow the python script to poweroff the machine
+#
+
+# Allow user to poweroff without authenticating
+Cmnd_Alias SYSCTL_POWEROFF = /bin/systemctl poweroff
+sk ALL=(root) NOPASSWD: SYSCTL_POWEROFF
+Defaults!SYSCTL_POWEROFF !requiretty
