@@ -27,7 +27,7 @@ I currently mainly use the Xubuntu guest, which is configured for GPU passthroug
 **CPU:** Intel® Core™ i7-5820K @4.4GHz \
 **RAM:** 32GB Corsair Vengeance LED DDR4-3000 CL15 Quad Kit (CMU32GX4M4C3000C15) \
 **MoBo:** MSI X99A SLI Krait Edition \
-**Primary GPU:** Gigabyte GeForce GTX 770 4GB Windforce 3X (GV-N770OC-4GD) \
+**Primary GPU:** Asus GeForce RTX 2080 Dual OC 8GB (90YV0C30-M0NM00/90YV0C30-M0NA00) \
 **Secondary GPU:** ASUS Radeon HD 5450 Silent (90-C1CP20-L0UANABZ/90-C1CP2U-L0UANAYZ) \
 **Storage:** Samsung 960 EVO 1TB NVMe SDD (MZ-V6E1T0BW)
 
