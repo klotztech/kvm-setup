@@ -1,8 +1,8 @@
 <domain type='kvm' id='1'>
   <name>xubuntu</name>
   <uuid>228d4caa-a3e7-4526-83dd-7fbdbb245b62</uuid>
-  <memory unit='KiB'>16777216</memory>
-  <currentMemory unit='KiB'>16777216</currentMemory>
+  <memory unit='KiB'>20971520</memory>
+  <currentMemory unit='KiB'>20971520</currentMemory>
   <vcpu placement='static'>8</vcpu>
   <resource>
     <partition>/machine</partition>
@@ -11,6 +11,7 @@
     <type arch='x86_64' machine='pc-i440fx-yakkety'>hvm</type>
     <loader readonly='yes' type='pflash'>/usr/share/OVMF/OVMF_CODE.fd</loader>
     <nvram>/var/lib/libvirt/qemu/nvram/xubuntu_VARS.fd</nvram>
+    <bootmenu enable='no'/>
   </os>
   <features>
     <acpi/>
@@ -19,7 +20,7 @@
       <hidden state='on'/>
     </kvm>
   </features>
-  <cpu mode='host-passthrough'>
+  <cpu mode='host-passthrough' check='none'>
     <topology sockets='1' cores='4' threads='2'/>
   </cpu>
   <clock offset='utc'>
@@ -37,8 +38,6 @@
   <devices>
     <emulator>/usr/bin/kvm-spice</emulator>
     <disk type='file' device='cdrom'>
-      <driver name='qemu' type='raw'/>
-      <backingStore/>
       <target dev='hda' bus='ide'/>
       <readonly/>
       <alias name='ide0-0-0'/>
@@ -93,7 +92,9 @@
     </interface>
     <serial type='pty'>
       <source path='/dev/pts/0'/>
-      <target port='0'/>
+      <target type='isa-serial' port='0'>
+        <model name='isa-serial'/>
+      </target>
       <alias name='serial0'/>
     </serial>
     <console type='pty' tty='/dev/pts/0'>
@@ -119,44 +120,43 @@
     <hostdev mode='subsystem' type='pci' managed='yes'>
       <driver name='vfio'/>
       <source>
-        <address domain='0x0000' bus='0x03' slot='0x00' function='0x0'/>
+        <address domain='0x0000' bus='0x00' slot='0x14' function='0x0'/>
       </source>
       <alias name='hostdev0'/>
-      <address type='pci' domain='0x0000' bus='0x00' slot='0x02' function='0x0'/>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x0a' function='0x0'/>
+    </hostdev>
+    <hostdev mode='subsystem' type='pci' managed='yes'>
+      <driver name='vfio'/>
+      <source>
+        <address domain='0x0000' bus='0x03' slot='0x00' function='0x0'/>
+      </source>
+      <alias name='hostdev1'/>
+      <rom bar='on' file='/var/lib/libvirt/rom/RTX2080.rom'/>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x02' function='0x0' multifunction='on'/>
     </hostdev>
     <hostdev mode='subsystem' type='pci' managed='yes'>
       <driver name='vfio'/>
       <source>
         <address domain='0x0000' bus='0x03' slot='0x00' function='0x1'/>
       </source>
-      <alias name='hostdev1'/>
-      <address type='pci' domain='0x0000' bus='0x00' slot='0x09' function='0x0'/>
+      <alias name='hostdev2'/>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x02' function='0x1'/>
     </hostdev>
     <hostdev mode='subsystem' type='pci' managed='yes'>
       <driver name='vfio'/>
       <source>
-        <address domain='0x0000' bus='0x07' slot='0x00' function='0x0'/>
-      </source>
-      <alias name='hostdev2'/>
-      <address type='pci' domain='0x0000' bus='0x00' slot='0x0a' function='0x0'/>
-    </hostdev>
-    <hostdev mode='subsystem' type='usb' managed='yes'>
-      <source>
-        <vendor id='0x1532'/>
-        <product id='0x011a'/>
-        <address bus='3' device='2'/>
+        <address domain='0x0000' bus='0x03' slot='0x00' function='0x2'/>
       </source>
       <alias name='hostdev3'/>
-      <address type='usb' bus='0' port='1'/>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x02' function='0x2'/>
     </hostdev>
-    <hostdev mode='subsystem' type='usb' managed='yes'>
+    <hostdev mode='subsystem' type='pci' managed='yes'>
+      <driver name='vfio'/>
       <source>
-        <vendor id='0x0b05'/>
-        <product id='0x181a'/>
-        <address bus='3' device='3'/>
+        <address domain='0x0000' bus='0x03' slot='0x00' function='0x3'/>
       </source>
       <alias name='hostdev4'/>
-      <address type='usb' bus='0' port='2'/>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x02' function='0x3'/>
     </hostdev>
     <memballoon model='virtio'>
       <alias name='balloon0'/>
