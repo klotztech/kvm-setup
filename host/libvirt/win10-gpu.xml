@@ -4,10 +4,23 @@
   <memory unit='KiB'>16777216</memory>
   <currentMemory unit='KiB'>16777216</currentMemory>
   <vcpu placement='static'>8</vcpu>
+  <sysinfo type='smbios'>
+    <bios>
+      <entry name='vendor'>American Megatrends Inc.</entry>
+      <entry name='version'>N.80</entry>
+      <entry name='date'>07/15/2016</entry>
+    </bios>
+    <system>
+      <entry name='manufacturer'>MSI</entry>
+      <entry name='product'>MS-7885</entry>
+      <entry name='version'>4.0</entry>
+    </system>
+  </sysinfo>
   <os>
     <type arch='x86_64' machine='pc-i440fx-bionic'>hvm</type>
     <loader readonly='yes' type='pflash'>/usr/share/OVMF/OVMF_CODE.fd</loader>
     <nvram>/var/lib/libvirt/qemu/nvram/win10x64_VARS.fd</nvram>
+    <smbios mode='sysinfo'/>
   </os>
   <features>
     <acpi/>
