@@ -78,9 +78,9 @@
   </pm>
   <devices>
     <emulator>/usr/bin/kvm-spice</emulator>
-    <disk type='file' device='disk'>
-      <driver name='qemu' type='qcow2' cache='writethrough'/>
-      <source file='/var/lib/libvirt/images/win10x64_shrunk.qcow2'/>
+    <disk type='block' device='disk'>
+      <driver name='qemu' type='raw' cache='none'/>
+      <source dev='/dev/sda'/>
       <target dev='vdb' bus='virtio'/>
       <address type='pci' domain='0x0000' bus='0x00' slot='0x07' function='0x0'/>
     </disk>
